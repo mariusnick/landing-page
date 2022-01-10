@@ -26,24 +26,18 @@ const navBarList = document.getElementById("navbar__list");
  * 
 */
 function scrolltoLink(sectionId){
-    console.log(sectionId)
-    let e = document.getElementById(sectionId); 
-    e.scrollIntoView({behavior: "smooth"});    
+    let s = document.getElementById(sectionId); 
+    s.scrollIntoView({behavior: "smooth"});    
 }
 
 function makeActive() {
     for (const section of sections) {
-
         const position = section.getBoundingClientRect();
-        console.log(position)
-        if (position.top <= 100 && position.bottom >= 100) {
-            
-           
+        if (position.top <= 120 && position.bottom >= 120) {
             section.classList.add("your-active-class");
             
         } else {
             const id = section.getAttribute("id");
-            
             section.classList.remove("your-active-class");
         }
     }
@@ -87,9 +81,9 @@ for (let i=0; i<sections.length; i++)
    
     // Scroll to anchor ID using scrollTO event
     for (link of links){
-        const sectionId = link.getAttribute('name-link');
         link.addEventListener('click', function(e){
-            e.preventDefault();        
+            e.preventDefault();
+            const sectionId = link.getAttribute('name-link');    
             scrolltoLink(sectionId);
             changeActiveClass(sectionId)
             
