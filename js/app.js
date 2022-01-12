@@ -26,9 +26,17 @@ const navBarList = document.getElementById("navbar__list");
  * 
 */
 function scrolltoLink(sectionId){
+    console.log(sectionId)
     let s = document.getElementById(sectionId); 
     s.scrollIntoView({behavior: "smooth"});    
 }
+
+function scroll(clickedElement, scrolledElement) {
+    clickedElement.addEventListener("click", function (e) {
+      e.preventDefault();
+      scrolledElement.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 
 function makeActive() {
     for (const section of sections) {
@@ -73,22 +81,14 @@ for (let i=0; i<sections.length; i++)
     section = sections[i]
     a.innerHTML += `<a href="#${section.id}" class="menu__link" name-link = "${section.id}">${section.dataset.nav}</a>`
     listItem.appendChild(a);
-    navBarList.appendChild(listItem)
+    navBarList.appendChild(listItem);
+    scroll(a,section);
     }
 
     const links = document.querySelectorAll('.menu__link');
 
    
-    // Scroll to anchor ID using scrollTO event
-    for (link of links){
-        link.addEventListener('click', function(e){
-            e.preventDefault();
-            const sectionId = link.getAttribute('name-link');    
-            scrolltoLink(sectionId);
-            changeActiveClass(sectionId)
-            
-        })
-    }
+    
 
     // Add class 'active' to section when near top of viewport and Set sections as active
 
