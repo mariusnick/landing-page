@@ -1,13 +1,15 @@
+
 # Landing Page Project
+This is  Landing Page project for the Udacity / Front End Web Development. It are use  HTML, CSS, JavaScript
 
-## Table of Contents
+# Table of Contents 
+- [Landing Page Project](#landing-page-project)
+- [Table of Contents](#table-of-contents)
+- [Project Demo](#demo)
+- [Thank You!](#thank-you)
 
-* [Instructions](#instructions)
+# Demo
+You can find a demo of my project <a href="https://mariusnick.github.io/Landing-Page/">here</a>
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+# Thank You
+Finally, thank you for visit  project.  :) 

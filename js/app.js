@@ -18,7 +18,7 @@
  * 
 */
 const sections = document.querySelectorAll('section')
-const navBarList = document.getElementById("navbar__list"); 
+const navBarList = document.getElementById("navbar__list");
 
 
 /**
@@ -35,6 +35,7 @@ function scroll(clickedElement, scrolledElement) {
     clickedElement.addEventListener("click", function (e) {
       e.preventDefault();
       scrolledElement.scrollIntoView({ behavior: "smooth" });
+      changeActiveClass(scrolledElement);
     });
   }
 
@@ -77,9 +78,9 @@ for (let i=0; i<sections.length; i++)
     {const listItem = document.createElement('li');
     
     const a = document.createElement("a"); 
-    listItem.setAttribute("class", "menu__link")
+    listItem.setAttribute("class", "navbar__menu")
     section = sections[i]
-    a.innerHTML += `<a href="#${section.id}" class="menu__link" name-link = "${section.id}">${section.dataset.nav}</a>`
+    a.innerHTML += `<a  class="menu__link" name-link = "${section.id}">${section.dataset.nav}</a>`
     listItem.appendChild(a);
     navBarList.appendChild(listItem);
     scroll(a,section);
