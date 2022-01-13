@@ -9,7 +9,7 @@ This is  Landing Page project for the Udacity / Front End Web Development. It ar
 - [Thank You!](#thank-you)
 
 # Demo
-You can find a demo of my project <a href="https://mariusnick.github.io/Landing-Page/">here</a>
+You can find a demo of my project <a href="https://mariusnick.github.io/landing-page/">Click here</a>
 
 # Thank You
 Finally, thank you for visit  project.  :) 
